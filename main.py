@@ -26,6 +26,7 @@ bfs_result = bfs(maze, start, end)
 
 maze_set = set()
 
+print("\n")
 print("*** Initial Labyrinth ***\n")
 visualize(width, height, maze_set)
 print("\033[%dB" % (2 * height))
@@ -36,6 +37,7 @@ for x, y in sorted(result):
     counter += 1
     maze_set.add((convert_coords(x), convert_coords(y)))
     if counter == len(result):
+        print("\n")
         print("*** Final Labyrinth ***\n")
         print('\n')
         visualize(width, height, maze_set)
